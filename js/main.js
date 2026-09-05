@@ -12,7 +12,7 @@ function showSlide(index) {
     dots.forEach((dot, dotIndex) => {
         const active = dotIndex === currentSlide;
         dot.classList.toggle('is-active', active);
-        dot.setAttribute('aria-selected', String(active));
+        dot.setAttribute('aria-selected', String(active)); 
     });
 }
 

@@ -9,24 +9,24 @@
     <script src="js/main.js" defer></script>
     <title>Super Loan | Vehicle and Home Loans</title>
 </head>
-
+ 
 <body>
-    <div class="page-shell">
+    <div class="page-shell" id="page-top">
         <header class="site-header">
-            <a class="brand" href="#top" aria-label="Super Loan home"><img class="brand-logo"
+            <a class="brand" href="#page-top" aria-label="Super Loan home"><img class="brand-logo"
                     src="Img/superLoanBrand.png" alt="Super Loan"><span>Super Loan!<span
                         class="brand-dot">.</span></span></a>
             <button class="menu-toggle" type="button" aria-expanded="false"
                 aria-controls="site-navigation"><span></span><span></span><span></span><span class="sr-only">Open
                     navigation</span></button>
             <nav class="site-navigation" id="site-navigation" aria-label="Main navigation"><a class="active"
-                    href="#top">Home</a>
+                    href="#page-top">Home</a>
                     <a href="#loans">Our loans</a>
                     <a href="#process">How it works</a>
-                    <ahref="#contact">Contact</a></nav>
+                    <a href="#contact">Contact</a></nav>
             <a class="header-action" href="#contact">Start an enquiry <span aria-hidden="true">↗</span></a>
         </header>
-        <main id="top">
+        <main>
           
             <section class="showcase" id="loans" aria-label="Loan opportunities">
                 <div class="section-heading">
@@ -101,8 +101,21 @@
                 </article>
             </section>
         </main>
-        <footer class="site-footer" id="contact"><span>Ready when you are.</span><a
-                href="mailto:hello@northstar.example">hello@northstar.example <span aria-hidden="true">↗</span></a>
+        <section class="contact-panel" id="contact" aria-labelledby="contact-title">
+            <div class="contact-details">
+                <span class="eyebrow"><span></span> Come say hello</span>
+                <h2 id="contact-title">Let’s make<br><em>it happen.</em></h2>
+                <p>Our team is ready to help you find a clear path to your next move.</p>
+                <address><strong>Sample office</strong><br>1250 Congress Avenue<br>Austin, TX 78701<br>United States</address>
+                <a class="contact-link" href="mailto:hello@superloan.example">hello@superloan.example <span aria-hidden="true">↗</span></a>
+                <a class="contact-phone" href="tel:+15125550148">+1 (512) 555-0148</a>
+            </div>
+            <div class="map-frame">
+                <iframe title="Google Map showing a sample Austin location" src="https://maps.google.com/maps?q=Central+Park,+New+York&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <footer class="site-footer"><span>Ready when you are.</span><a
+                href="mailto:hello@superloan.example">hello@superloan.example <span aria-hidden="true">↗</span></a>
         </footer>
     </div>
 </body>
