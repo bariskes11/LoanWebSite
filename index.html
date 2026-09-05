@@ -1,11 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Loan</title>
+    <meta name="description" content="Flexible vehicle and home financing made simple.">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <title>Super Loan | Vehicle and Home Loans</title>
 </head>
+
 <body>
-    
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="#top" aria-label="Super Loan home"><img class="brand-logo"
+                    src="Img/superLoanBrand.png" alt="Super Loan"><span>Super Loan!<span
+                        class="brand-dot">.</span></span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false"
+                aria-controls="site-navigation"><span></span><span></span><span></span><span class="sr-only">Open
+                    navigation</span></button>
+            <nav class="site-navigation" id="site-navigation" aria-label="Main navigation"><a class="active"
+                    href="#top">Home</a>
+                    <a href="#loans">Our loans</a>
+                    <a href="#process">How it works</a>
+                    <ahref="#contact">Contact</a></nav>
+            <a class="header-action" href="#contact">Start an enquiry <span aria-hidden="true">↗</span></a>
+        </header>
+        <main id="top">
+          
+            <section class="showcase" id="loans" aria-label="Loan opportunities">
+                <div class="section-heading">
+                    <div><span class="eyebrow"><span></span> Find your next chapter</span>
+                        <h2>Made for what<br><em>matters next.</em></h2>
+                    </div>
+                    <p>From first keys to four wheels, our people make the numbers feel simple.</p>
+                </div>
+                <div class="slider" data-slider>
+                    <div class="slides">
+                        <article class="slide is-active" data-slide><img src="Img/loanAssets/car1.jpeg"
+                                alt="White Volvo parked on a tree-lined street">
+                            <div class="slide-caption"><span>01 / 04</span><strong>Drive into something
+                                    new.</strong><small>Flexible car loans</small></div>
+                        </article>
+                        <article class="slide" data-slide><img src="Img/loanAssets/haus1.jpeg"
+                                alt="Modern brick and concrete home beside a green lawn">
+                            <div class="slide-caption"><span>02 / 04</span><strong>Make room for
+                                    living.</strong><small>Thoughtful home loans</small></div>
+                        </article>
+                        <article class="slide" data-slide><img src="Img/loanAssets/car2.jpeg"
+                                alt="Car ready for a new journey">
+                            <div class="slide-caption"><span>03 / 04</span><strong>Your next route starts
+                                    here.</strong><small>Personalised car loans</small></div>
+                        </article>
+                        <article class="slide" data-slide><img src="Img/loanAssets/haus2.jpeg"
+                                alt="Bright residential home exterior">
+                            <div class="slide-caption"><span>04 / 04</span><strong>A place to call
+                                    yours.</strong><small>Simple home loans</small></div>
+                        </article>
+                    </div><button class="slider-button previous" type="button" data-direction="previous"
+                        aria-label="Previous slide">←</button><button class="slider-button next" type="button"
+                        data-direction="next" aria-label="Next slide">→</button>
+                    <div class="slider-footer">
+                        <div class="slider-dots" role="tablist" aria-label="Choose a slide"><button
+                                class="dot is-active" type="button" role="tab" aria-selected="true"
+                                aria-label="Show slide 1"></button><button class="dot" type="button" role="tab"
+                                aria-selected="false" aria-label="Show slide 2"></button><button class="dot"
+                                type="button" role="tab" aria-selected="false"
+                                aria-label="Show slide 3"></button><button class="dot" type="button" role="tab"
+                                aria-selected="false" aria-label="Show slide 4"></button></div><span
+                            class="slider-rule"></span><span class="slider-label">Scroll to explore</span>
+                    </div>
+                </div>
+                <div class="intro-links"><a class="primary-button" href="#loans">Explore your options <span
+                            aria-hidden="true">→</span></a><a class="text-link" href="#process">See how it works <span
+                            aria-hidden="true">↘</span></a></div>
+              
+            </section>
+            
+            <section class="features" id="process" aria-label="Our difference">
+                <article class="feature-card"><span class="card-number">01</span>
+                    <div>
+                        <h3>Fast, without the fuss.</h3>
+                        <p>A clear application and quick answers, so you can spend less time waiting and more time
+                            planning.</p><a href="#contact">Learn more <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <article class="feature-card featured"><span class="card-number">02</span>
+                    <div>
+                        <h3>Flexible by design.</h3>
+                        <p>Repayments that work with your rhythm, with a plan shaped around your real life.</p><a
+                            href="#contact">Learn more <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+                <article class="feature-card"><span class="card-number">03</span>
+                    <div>
+                        <h3>People you can trust.</h3>
+                        <p>Human guidance, plain language, and no awkward surprises hiding in the small print.</p><a
+                            href="#contact">Learn more <span aria-hidden="true">↗</span></a>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <footer class="site-footer" id="contact"><span>Ready when you are.</span><a
+                href="mailto:hello@northstar.example">hello@northstar.example <span aria-hidden="true">↗</span></a>
+        </footer>
+    </div>
 </body>
+
 </html>
