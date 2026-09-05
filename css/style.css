@@ -40,7 +40,7 @@ a {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: var(--paper);
+    background: var(--lime);
     min-height: 94px;
     padding: 0 clamp(24px, 5vw, 82px);
     display: flex;

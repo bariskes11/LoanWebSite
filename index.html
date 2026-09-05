@@ -9,25 +9,26 @@
     <script src="js/main.js" defer></script>
     <title>Super Loan | Vehicle and Home Loans</title>
 </head>
- 
+
 <body>
     <div class="page-shell" id="page-top">
         <header class="site-header">
-            <a class="brand" href="#page-top" aria-label="Super Loan home"><img class="brand-logo"
-                    src="Img/superLoanBrand.png" alt="Super Loan"><span>Super Loan!<span
-                        class="brand-dot">.</span></span></a>
-            <button class="menu-toggle" type="button" aria-expanded="false"
-                aria-controls="site-navigation"><span></span><span></span><span></span><span class="sr-only">Open
+            <a class="brand" href="#page-top" aria-label="Super Loan home">
+                <img class="brand-logo"src="Img/superLoanBrand.png" alt="Super Loan">
+                <span>Super Loan!<span class="brand-dot">.</span></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+                <span class="sr-only">Open
                     navigation</span></button>
             <nav class="site-navigation" id="site-navigation" aria-label="Main navigation"><a class="active"
                     href="#page-top">Home</a>
-                    <a href="#loans">Our loans</a>
-                    <a href="#process">How it works</a>
-                    <a href="#contact">Contact</a></nav>
-            <a class="header-action" href="#contact">Start an enquiry <span aria-hidden="true">↗</span></a>
+                <a href="#loans">Our loans</a>
+                <a href="#process">How it works</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
         </header>
         <main>
-          
             <section class="showcase" id="loans" aria-label="Loan opportunities">
                 <div class="section-heading">
                     <div><span class="eyebrow"><span></span> Find your next chapter</span>
@@ -74,9 +75,9 @@
                 <div class="intro-links"><a class="primary-button" href="#loans">Explore your options <span
                             aria-hidden="true">→</span></a><a class="text-link" href="#process">See how it works <span
                             aria-hidden="true">↘</span></a></div>
-              
+
             </section>
-            
+
             <section class="features" id="process" aria-label="Our difference">
                 <article class="feature-card"><span class="card-number">01</span>
                     <div>
@@ -104,11 +105,13 @@
                 <div class="calculator-intro">
                     <span class="eyebrow"><span></span> Plan your payment</span>
                     <h2 id="calculator-title">See what your<br><em>loan could look like.</em></h2>
-                    <p>Adjust the numbers to get a quick estimate of your monthly payment. This is an example only, not a formal quote.</p>
+                    <p>Adjust the numbers to get a quick estimate of your monthly payment. This is an example only, not
+                        a formal quote.</p>
                 </div>
                 <form class="calculator-form" id="loan-calculator">
                     <label for="loan-amount">Loan amount</label>
-                    <div class="input-wrap"><span>$</span><input id="loan-amount" name="amount" type="number" min="1000" step="500" value="20000" required></div>
+                    <div class="input-wrap"><span>$</span><input id="loan-amount" name="amount" type="number" min="1000"
+                            step="500" value="20000" required></div>
                     <label for="loan-term">Payment plan</label>
                     <select id="loan-term" name="term">
                         <option value="36">36 months</option>
@@ -117,13 +120,17 @@
                         <option value="72">72 months</option>
                         <option value="84">84 months</option>
                     </select>
-                    <label class="rate-label" for="loan-term">Interest rate <output id="interest-rate">7.5%</output><small>fixed by term</small></label>
-                    <button class="calculator-button" type="submit">Calculate payment <span aria-hidden="true">→</span></button>
+                    <label class="rate-label" for="loan-term">Interest rate <output
+                            id="interest-rate">7.5%</output><small>fixed by term</small></label>
+                    <button class="calculator-button" type="submit">Calculate payment <span
+                            aria-hidden="true">→</span></button>
                 </form>
                 <div class="calculator-result" aria-live="polite">
                     <span class="result-label">Estimated monthly payment</span>
                     <strong id="monthly-payment">$400.75</strong>
-                    <div class="result-breakdown"><span>Total repayment <strong id="total-payment">$24,045.00</strong></span><span>Total interest <strong id="total-interest">$4,045.00</strong></span></div>
+                    <div class="result-breakdown"><span>Total repayment <strong
+                                id="total-payment">$24,045.00</strong></span><span>Total interest <strong
+                                id="total-interest">$4,045.00</strong></span></div>
                 </div>
             </section>
         </main>
@@ -132,12 +139,16 @@
                 <span class="eyebrow"><span></span> Come say hello</span>
                 <h2 id="contact-title">Let’s make<br><em>it happen.</em></h2>
                 <p>Our team is ready to help you find a clear path to your next move.</p>
-                <address><strong>Sample office</strong><br>1250 Congress Avenue<br>Austin, TX 78701<br>United States</address>
-                <a class="contact-link" href="mailto:hello@superloan.example">hello@superloan.example <span aria-hidden="true">↗</span></a>
+                <address><strong>Sample office</strong><br>1250 Congress Avenue<br>Austin, TX 78701<br>United States
+                </address>
+                <a class="contact-link" href="mailto:hello@superloan.example">hello@superloan.example <span
+                        aria-hidden="true">↗</span></a>
                 <a class="contact-phone" href="tel:+15125550148">+1 (512) 555-0148</a>
             </div>
             <div class="map-frame">
-                <iframe title="Google Map showing a sample Austin location" src="https://maps.google.com/maps?q=Central+Park,+New+York&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe title="Google Map showing a sample Austin location"
+                    src="https://maps.google.com/maps?q=Central+Park,+New+York&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <footer class="site-footer"><span>Ready when you are.</span><a
