@@ -100,6 +100,32 @@
                     </div>
                 </article>
             </section>
+            <section class="calculator-panel" id="calculator" aria-labelledby="calculator-title">
+                <div class="calculator-intro">
+                    <span class="eyebrow"><span></span> Plan your payment</span>
+                    <h2 id="calculator-title">See what your<br><em>loan could look like.</em></h2>
+                    <p>Adjust the numbers to get a quick estimate of your monthly payment. This is an example only, not a formal quote.</p>
+                </div>
+                <form class="calculator-form" id="loan-calculator">
+                    <label for="loan-amount">Loan amount</label>
+                    <div class="input-wrap"><span>$</span><input id="loan-amount" name="amount" type="number" min="1000" step="500" value="20000" required></div>
+                    <label for="loan-term">Payment plan</label>
+                    <select id="loan-term" name="term">
+                        <option value="36">36 months</option>
+                        <option value="48">48 months</option>
+                        <option value="60" selected>60 months</option>
+                        <option value="72">72 months</option>
+                        <option value="84">84 months</option>
+                    </select>
+                    <label class="rate-label" for="loan-term">Interest rate <output id="interest-rate">7.5%</output><small>fixed by term</small></label>
+                    <button class="calculator-button" type="submit">Calculate payment <span aria-hidden="true">→</span></button>
+                </form>
+                <div class="calculator-result" aria-live="polite">
+                    <span class="result-label">Estimated monthly payment</span>
+                    <strong id="monthly-payment">$400.75</strong>
+                    <div class="result-breakdown"><span>Total repayment <strong id="total-payment">$24,045.00</strong></span><span>Total interest <strong id="total-interest">$4,045.00</strong></span></div>
+                </div>
+            </section>
         </main>
         <section class="contact-panel" id="contact" aria-labelledby="contact-title">
             <div class="contact-details">

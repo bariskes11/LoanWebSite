@@ -46,3 +46,43 @@ navigation.addEventListener('click', (event) => {
         navigation.classList.remove('is-open');
     }
 });
+
+const calculator = document.querySelector('#loan-calculator');
+const amountInput = document.querySelector('#loan-amount');
+const rateDisplay = document.querySelector('#interest-rate');
+const termInput = document.querySelector('#loan-term');
+const monthlyPayment = document.querySelector('#monthly-payment');
+const totalPayment = document.querySelector('#total-payment');
+const totalInterest = document.querySelector('#total-interest');
+const currency = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
+const ratesByTerm = {
+    36: 6.5,
+    48: 7,
+    60: 7.5,
+    72: 8.25,
+    84: 9
+};
+
+function calculateLoan() {
+    const amount = Number(amountInput.value);
+    const months = Number(termInput.value);
+    const annualRate = ratesByTerm[months];
+    const monthlyRate = annualRate / 100 / 12;
+    const payment = monthlyRate === 0
+        ? amount / months
+        : amount * monthlyRate * (1 + monthlyRate) ** months / ((1 + monthlyRate) ** months - 1);
+    const repayment = payment * months;
+
+    monthlyPayment.textContent = currency.format(payment);
+    totalPayment.textContent = currency.format(repayment);
+    totalInterest.textContent = currency.format(repayment - amount);
+    rateDisplay.textContent = `${annualRate}%`;
+}
+
+calculator.addEventListener('submit', (event) => {
+    event.preventDefault();
+    calculateLoan();
+});
+
+[amountInput, termInput].forEach((input) => input.addEventListener('input', calculateLoan));
+calculateLoan();
