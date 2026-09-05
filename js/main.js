@@ -41,7 +41,11 @@ menuToggle.addEventListener('click', () => {
 });
 
 navigation.addEventListener('click', (event) => {
-    if (event.target.matches('a')) {
+    const selectedLink = event.target.closest('a');
+
+    if (selectedLink) {
+        navigation.querySelectorAll('a').forEach((link) => link.classList.remove('active'));
+        selectedLink.classList.add('active');
         menuToggle.setAttribute('aria-expanded', 'false');
         navigation.classList.remove('is-open');
     }
@@ -54,6 +58,7 @@ const termInput = document.querySelector('#loan-term');
 const monthlyPayment = document.querySelector('#monthly-payment');
 const totalPayment = document.querySelector('#total-payment');
 const totalInterest = document.querySelector('#total-interest');
+const calculatorResult = document.querySelector('.calculator-result');
 const currency = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
 const ratesByTerm = {
     36: 6.5,
@@ -63,7 +68,7 @@ const ratesByTerm = {
     84: 9
 };
 
-function calculateLoan() {
+function calculateLoan(shouldHighlight = false) {
     const amount = Number(amountInput.value);
     const months = Number(termInput.value);
     const annualRate = ratesByTerm[months];
@@ -77,11 +82,18 @@ function calculateLoan() {
     totalPayment.textContent = currency.format(repayment);
     totalInterest.textContent = currency.format(repayment - amount);
     rateDisplay.textContent = `${annualRate}%`;
+    if (shouldHighlight) {
+        calculatorResult.classList.remove('is-calculated');
+        calculatorResult.classList.add('is-resetting');
+        void calculatorResult.offsetWidth;
+        calculatorResult.classList.remove('is-resetting');
+        calculatorResult.classList.add('is-calculated');
+    }
 }
 
 calculator.addEventListener('submit', (event) => {
     event.preventDefault();
-    calculateLoan();
+    calculateLoan(true);
 });
 
 [amountInput, termInput].forEach((input) => input.addEventListener('input', calculateLoan));

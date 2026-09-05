@@ -38,6 +38,7 @@ a {
 
 .site-header {
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     z-index: 20;
     background: var(--lime);
@@ -84,6 +85,16 @@ a {
 .site-navigation .active {
     color: var(--ink);
     border-color: var(--ink);
+}
+
+.site-navigation a:hover {
+    animation: nav-link-shake .3s ease;
+}
+
+@keyframes nav-link-shake {
+    0%, 100% { transform: translateX(0); }
+    35% { transform: translateX(-2px); }
+    70% { transform: translateX(2px); }
 }
 
 .header-action {
@@ -298,6 +309,7 @@ h2 em {
     background: rgba(24, 37, 34, .25);
     font-size: 22px;
     cursor: pointer;
+    transition: background-color 1s ease, color 1s ease, border-color 1s ease;
 }
 
 .slider-button:hover {
@@ -524,6 +536,20 @@ h2 em {
     font: 700 12px 'DM Sans', Arial, sans-serif;
     text-align: left;
     padding: 0 18px;
+    transition: background-color .25s ease, color .25s ease;
+}
+
+.calculator-button:hover {
+    background: var(--lime);
+    color: var(--ink);
+    animation: calculator-button-shake .35s ease;
+}
+
+@keyframes calculator-button-shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-2px); }
 }
 
 .calculator-button span {
@@ -534,16 +560,35 @@ h2 em {
 .calculator-result {
     grid-column: 1 / -1;
     padding: 30px;
+    background: var(--ink);
+    color: var(--white);
+    transition: background-color .45s ease, color .45s ease;
+}
+
+.calculator-result.is-calculated {
     background: var(--lime);
+    color: var(--ink);
+}
+
+.calculator-result.is-resetting {
+    background: var(--ink);
+    color: var(--white);
+    transition: none;
 }
 
 .result-label {
     display: block;
-    color: var(--muted);
+    color: rgba(251, 252, 247, .72);
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .1em;
+    transition: color .45s ease;
+}
+
+.calculator-result.is-calculated .result-label,
+.calculator-result.is-calculated .result-breakdown {
+    color: var(--muted);
 }
 
 .calculator-result > strong {
@@ -551,13 +596,14 @@ h2 em {
     margin-top: 8px;
     font-size: clamp(38px, 5vw, 64px);
     letter-spacing: -.06em;
+    transition: color 1s ease;
 }
 
 .result-breakdown {
     display: flex;
     gap: 38px;
     margin-top: 20px;
-    color: var(--muted);
+    color: rgba(251, 252, 247, .72);
     font-size: 11px;
 }
 
@@ -568,8 +614,13 @@ h2 em {
 }
 
 .result-breakdown strong {
-    color: var(--ink);
+    color: var(--white);
     font-size: 14px;
+    transition: color .45s ease;
+}
+
+.calculator-result.is-calculated .result-breakdown strong {
+    color: var(--ink);
 }
 
 .site-footer {
@@ -659,7 +710,7 @@ h2 em {
     font-weight: 700;
 }
 
-@media (max-width:720px) {
+@media (max-width:900px) {
     .site-header {
         min-height: 74px;
         gap: 0;
